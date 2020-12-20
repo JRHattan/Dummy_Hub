@@ -35,7 +35,8 @@ we built a first iteration machine learning model
 database
 ✓ Outputs label(s) for input data
 
-![ML_model_mockup_version1](./Resources/ML_model_mockup_version1.png) 
+![ML model code](https://github.com/JRHattan/Dummy_Hub/blob/main/Resources/ML%20model%20code.PNG) 
+![accuracy score](https://github.com/JRHattan/Dummy_Hub/blob/main/Resources/accuracy%20score.PNG)
 
 ## Database
 ✓ Sample data that mimics the
@@ -44,7 +45,7 @@ schema
 ✓ Draft machine learning module is
 connected to the provisional database
 
-![SQLite_DB_mockup](./Resources/SQLite_DB_mockup.png) 
+![Database connection](https://github.com/JRHattan/Dummy_Hub/blob/main/Resources/Database%20connection.PNG) 
 
 ### Resources
     All of the data comes from a CSV file from Lending Club which can be found on Kaggle.com  
