@@ -24,6 +24,7 @@ Our communication protocols include:
 * Slack to notify team members of GitHub commits
 * Email & Slack to coordinate collaboration and schedule changes
 * Coordinating to attend TA office hours as a team 
+* Each team member has created a GitHub branch and we have a protocol to upload changes to our individual branches, notify team-members, and then commit or merge changes to our 'main' GitHub branch
 
 ## Machine Learning Model
 We built a first iteration machine learning model that connects to the sample data from the provisional database we built. This model is a Logistic Regression ML model that takes whether a loan is "Good" or "Bad" as the variable we are looking to predict (dependent or "y" value) and takes "FICO credit score" and "Debt-to-Income Ratio" as independent variables ("X" variable for the ML model).
