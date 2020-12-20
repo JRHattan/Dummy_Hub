@@ -36,7 +36,7 @@ Our initial mockup Machine Learning model produces an accuracy score of 0.81
 ![accuracy score](https://github.com/JRHattan/Dummy_Hub/blob/main/Resources/accuracy%20score.PNG)
 
 ## Database
-We built a provisional SQLite database that takes sample loan data from our Lending Club loan dataset and creates a dataframe that can be read into our Machine Learning model. 
+We built a provisional SQLite database that takes sample loan data from our Lending Club loan dataset and creates a dataframe that can be read into our Machine Learning model. We filtered the dataset down from 2.2million rows of loan data to about 40,000 rows (sorting by date to capture only 2 months worth of data) and selecting 10 columns of loan data to build our initial sample dataset to feed into the machine learning model. 
 
 ![Database connection](https://github.com/JRHattan/Dummy_Hub/blob/main/Resources/Database%20connection.PNG) 
 
