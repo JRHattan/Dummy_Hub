@@ -11,48 +11,31 @@ We use a dataset of Lending Club loan data spanning over 10 years.  The dataset 
 
 ### Questions we hope to answer through this project
 
-    What factors constitutes a successful loan versus a risky loan
-	    Does the time at which a payment is done determine the outcome of a loan
-	    Does the amount of a payment indicate the successfulness of the loan
-	    Do  delinquents alter the amount of successful versus not being successful
-	    What step of a loan is important for predicting the outcome of a loan
+* Can we build machine learning models that predict good and bad loans with high accuracy?
+* Which factors (variables) contribute the most helpful information to the machine learning model?
+* Which type of machine learning model is best suited for this task?
+* Which optimization or boosting methods best help optimize the accuracy of machine learning models for this type of dataset?
 
-	    What information should be defined for the machine learning
-		    What are the dependent variable versus the independent variable based off of the filtered loan data
-    Do we need to have more than one independent variable to compare against the one dependent variable
 
 
 ## GitHub
-✓ Description of the communication
-protocols 
-    *Schedule group online meetings (Google Hangouts/Zoom)
-    *Slack to notify team members of GitHub commits
-    *Email & Slack to coordinate collaboration and schedule changes
+Our communication protocols include:
+* Schedule group online meetings (Google Hangouts/Zoom)
+* Slack to notify team members of GitHub commits
+* Email & Slack to coordinate collaboration and schedule changes
+* Coordinating to attend TA office hours as a team 
 
 ## Machine Learning Model
-we built a first iteration machine learning model
-✓ Takes in data in from the provisional
-database
-✓ Outputs label(s) for input data
+We built a first iteration machine learning model that connects to the sample data from the provisional database we built. This model is a Logistic Regression ML model that takes whether a loan is "Good" or "Bad" as the variable we are looking to predict (dependent or "y" value) and takes "FICO credit score" and "Debt-to-Income Ratio" as independent variables ("X" variable for the ML model).
+
 
 ![ML model code](https://github.com/JRHattan/Dummy_Hub/blob/main/Resources/ML%20model%20code.PNG) 
+
+Our initial mockup Machine Learning model produces an accuracy score of 0.81
 ![accuracy score](https://github.com/JRHattan/Dummy_Hub/blob/main/Resources/accuracy%20score.PNG)
 
 ## Database
-✓ Sample data that mimics the
-expected final database structure or
-schema
-✓ Draft machine learning module is
-connected to the provisional database
+We built a provisional SQLite database that takes sample loan data from our Lending Club loan dataset and creates a dataframe that can be read into our Machine Learning model. 
 
 ![Database connection](https://github.com/JRHattan/Dummy_Hub/blob/main/Resources/Database%20connection.PNG) 
 
-### Resources
-    All of the data comes from a CSV file from Lending Club which can be found on Kaggle.com  
-	    The data presented comes from the collection of information such as:
-		    Fully paid
-		    Current
-		    In Grace Period
-		    Late (16-30)
-		    Late (30-120)
-		    Charged off 
