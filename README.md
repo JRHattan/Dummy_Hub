@@ -38,23 +38,42 @@ The master branch should include:
 
 ✓ All code necessary to perform exploratory analysis 
 
+![DataExploration_code](https://github.com/JRHattan/Dummy_Hub/blob/main/Resources/DataExploration_code.PNG)
+
 ✓ Some code necessary to complete the machine learning portion of the project README.md 
 
 ## Machine Learning Model
-Machine Learning Model
-Team members submit the code for their machine learning model, as well as the following: 
 
-✓ Description of preliminary data preprocessing
-
-✓ Description of preliminary feature engineering and preliminary feature selection, including their decision making process 
-
-✓ Description of how data was split into training and testing sets – standard split (verify 70% train and 30% test)
-
-✓ Explanation of model choice, including limitations and benefits
+### Preliminary data preprocessing
+We performed extensive preliminary data preprocessing to prepare our dataset to function properly in Machine Learning models, including:
+* We filtered our dataset on “loan_status” column, dropping all categories except “Fully Paid” & “Charged Off” to create a “good loan vs. bad loan” column ( we exclude data pertaining to  loans that are in repayment to focus only on the loans where the outcome is known, either “Fully Paid” (good loans) or “Charged Off” (bad loans))
+* We learned from our data exploration  that the loan dataset contained a large amount of missing values, so we dropped all columns that were missing over 100,000 values
+* We used the “data dictionary” from Lending Club to learn about each column of data and used this resource and subject matter expertise to drop duplicate data columns, text and date data columns that are not usable in ML models, as well as data columns  that would not be known before a loan is approved and being serviced
+* We dropped missing values or “na”s from dataset using Panda’s “dropna” method
+* We transformed non-numeric categorical data to dummy variables with Panda’s “get_dummies” method
 
 
+### Preliminary feature engineering and preliminary feature selection
 
-<!-- ![ML model code](https://github.com/JRHattan/Dummy_Hub/blob/main/Resources/ML%20model%20code.PNG)  -->
+To reduce the features to include in our ML models, we first eliminated the features with large amounts of missing data. Then we eliminated those with redundant or duplicate data, and further refined our dataset by removing features that do not provide data relevant to making predictions about credit risk.
+
+ * We dropped features containing duplicate or redundant loan data in some form, as well as loan data set features that would be unknown at the time of a credit application.
+
+    * The  features included our ML models are information coming from the loan application or a credit report pulled on the loan applicant when they applied for a loan 
+    * The features contain data like a borrower’s Annual Income, Debt-to-Income Ratio, FICO score, outstanding credit limits and utilization amounts, delinquencies on other credit lines, bankruptcy history and public records about borrowers, among others.
+
+### Determining training and testing datasets
+We split our data into training and testing sets, using scikit-learn’s “train_test_split” method, and used the default split of 75% of data for model training and 25% of data for model testing.  
+
+
+
+### Model choice
+We ran several types of Machine Learning models on our preprocessed Lending Club dataset, including Logistic Regression and Balanced Random Forest Classifier models. We focus on these types of Supervised Machine Learning models because they are suited to make classification predictions, as well as their robustness and ability to handle large amounts of data. While Logistic Regression models tend to be easy to interpret, they tend to produce lower accuracy scores than other ML model types. Random Forest models tend to have higher accuracy and are also generally easier to interpret.
+
+![BRFCModel_Accuracy_ClassifReport](https://github.com/JRHattan/Dummy_Hub/blob/main/Resources/BRFCModel_Accuracy_ClassifReport.PNG)
+
+
+
 
 ## Database
  
