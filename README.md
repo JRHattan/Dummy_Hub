@@ -59,7 +59,7 @@ We created a Database using Postgres and an AWS to store our raw Lending Club da
 * Our Machine Learning model connects to the Database using a  SQLAlchemy connection string
 * We created an Entity Relationship Diagram (ERD) to map the data relationships in our datasets
 
-![ERD](https://github.com/JRHattan/Dummy_Hub/blob/main/Resources/ERD_Join_Test.png.PNG)
+![ERD](https://github.com/JRHattan/ML_Models_For_Credit_Decisions/blob/main/Resources/ERD_Join_Test.png)
 
 ## Dashboard
 To help consumers of our analysis, we are using Tableau to create a visual and interactive dashboard. We will import the dataset from our SQL databse into Tableau. 
