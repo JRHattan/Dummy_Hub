@@ -38,7 +38,7 @@ The master branch should include:
 
 ✓ All code necessary to perform exploratory analysis 
 
-![DataExploration_code](https://github.com/JRHattan/Dummy_Hub/blob/main/Resources/DataExploration_code.PNG)
+![DataExploration_code](https://github.com/JRHattan/ML_Models_For_Credit_Decisions/blob/main/Resources/DataExploration_code.png)
 
 ✓ Some code necessary to complete the machine learning portion of the project README.md 
 
