@@ -85,7 +85,7 @@ Team members present a fully integrated database.
 ✓ Includes at least one connection string (using SQLAlchemy or PyMongo) 
 Note: If you use a SQL database, you must provide your ERD with relationships.
 
-<!-- ![Database connection](https://github.com/JRHattan/Dummy_Hub/blob/main/Resources/Database%20connection.PNG)  -->
+<!-- ![Database connection](https://github.com/JRHattan/ML_Models_For_Credit_Decisions/blob/main/Resources/BRFCModel_Accuracy_ClassifReport.png)  -->
 
 
 
