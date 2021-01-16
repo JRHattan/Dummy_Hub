@@ -20,6 +20,21 @@ We use a dataset of Lending Club loan data spanning over 10 years.  The dataset 
 We created a presentation that outlines our project, the link to access the presentation in Google Slides is:
 https://docs.google.com/presentation/d/1wl5fh1hy7INwmN3SFGhOb3SmR-6gdZKuIa7i79OaafM/edit?ts=5fe9341f#slide=id.gb622606d37_0_5
 
+<<<<<<< HEAD
+=======
+## GitHub
+Github
+Master Branch 
+All code in the master branch is production-ready. 
+The master branch should include: 
+
+✓ All code necessary to perform exploratory analysis 
+
+![DataExploration_code](https://github.com/JRHattan/ML_Models_For_Credit_Decisions/blob/main/Resources/DataExploration_code.png)
+
+✓ Some code necessary to complete the machine learning portion of the project README.md 
+
+>>>>>>> main
 ## Machine Learning Model
 
 ### Preliminary data preprocessing
@@ -53,11 +68,25 @@ We ran several types of Machine Learning models on our preprocessed Lending Club
 
 ## Database
  
+<<<<<<< HEAD
 We created a Database using Postgres and an AWS to store our raw Lending Club dataset and a cleaned version of the dataset. We use Spark to upload our raw loan dataset (in csv format) to the database named 'credit_decisions', and 
 * We joined 2 tables using a SQL "full join"
 ![Join](https://github.com/JRHattan/Dummy_Hub/blob/main/Resources/Join.PNG)
 * Our Machine Learning model connects to the Database using a  SQLAlchemy connection string
 * We created an Entity Relationship Diagram (ERD) to map the data relationships in our datasets
+=======
+Team members present a fully integrated database. 
+✓ Database stores static data for use during the project 
+✓ Database interfaces with the project in some format (e.g., scraping updates the database, or database connects to the model) 
+✓ Includes at least two tables (or collections, if using MongoDB) 
+✓ Includes at least one join using the database language (not including any joins in Pandas) 
+✓ Includes at least one connection string (using SQLAlchemy or PyMongo) 
+Note: If you use a SQL database, you must provide your ERD with relationships.
+
+![Database connection](https://github.com/JRHattan/ML_Models_For_Credit_Decisions/blob/main/Resources/BRFCModel_Accuracy_ClassifReport.png)
+
+
+>>>>>>> main
 
 ![ERD](https://github.com/JRHattan/Dummy_Hub/blob/main/Resources/ERD_Join_Test.png.PNG)
 
@@ -79,7 +108,21 @@ Description of the bluprint of interactive elements we plan to build into our Da
 
 * The code necessary to perform exploratory analysis on our raw dataset
 
+<<<<<<< HEAD
 ![DataExploration_code](https://github.com/JRHattan/Dummy_Hub/blob/main/Resources/DataExploration_code.PNG)
+=======
+## Dashboard
+To help consumers of our analysis, we are using Tableau to create a visual and interactive dashboard. We will import the dataset from our SQL databse into Tableau. 
+Description of interactive element(s)- 
+* Have a visualization where is has the total percent of loans selected  at any given time
+* A visualization that shows the average FICO score of the loans that are selected at any given time
+* A pie chart of one of the ratios we are using
+* A gauge chart of that is based on how risky the loan is
+* A scatter chart of annual income and loan amount
+* A bubble chart of tax liens and loan amount
+* Line chart of months and amount of loans or number of good vs. bad loans
+
+>>>>>>> main
 
 ✓ The Machine Learning code we created to make credit decisions and predict the classification of 'Fully Paid' (good) and 'Charged Off' (bad) loans  
 ![BRFC_model_deliv2](https://github.com/JRHattan/Dummy_Hub/blob/main/Resources/BRFC_model_deliv2.PNG)
