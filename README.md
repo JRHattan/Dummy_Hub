@@ -79,7 +79,7 @@ Description of the bluprint of interactive elements we plan to build into our Da
 
 * The code necessary to perform exploratory analysis on our raw dataset
 
-![DataExploration_code](https://github.com/JRHattan/Dummy_Hub/blob/main/Resources/DataExploration_code.PNG)
+![DataExploration_code](https://github.com/JRHattan/ML_Models_For_Credit_Decisions/blob/main/Resources/DataExploration_code.png)
 
 ✓ The Machine Learning code we created to make credit decisions and predict the classification of 'Fully Paid' (good) and 'Charged Off' (bad) loans  
-![BRFC_model_deliv2](https://github.com/JRHattan/Dummy_Hub/blob/main/Resources/BRFC_model_deliv2.PNG)
+![BRFC_model_deliv2](https://github.com/JRHattan/ML_Models_For_Credit_Decisions/blob/main/Resources/BRFC_model_deliv2.png)
