@@ -102,8 +102,14 @@ Individual Branches
 
 
 ## Dashboard
-A blueprint for the dashboard is created and includes all of the following: 
-✓ Storyboard on Google Slide(s) 
-✓ Description of the tool(s) that will be used to create final dashboard 
-✓ Description of interactive element(s)
+To help consumers of our analysis, we are using Tableau to create a visual and interactive dashboard. We will import the dataset from our SQL databse into Tableau. 
+Description of interactive element(s)- 
+* Have a visualization where is has the total percent of loans selected  at any given time
+* A visualization that shows the average FICO score of the loans that are selected at any given time
+* A pie chart of one of the ratios we are using
+* A gauge chart of that is based on how risky the loan is
+* A scatter chart of annual income and loan amount
+* A bubble chart of tax liens and loan amount
+* Line chart of months and amount of loans or number of good vs. bad loans
+
 
