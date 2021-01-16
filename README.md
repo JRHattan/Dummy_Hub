@@ -48,7 +48,7 @@ We split our data into training and testing sets, using scikit-learn’s “trai
 ### Model choice
 We ran several types of Machine Learning models on our preprocessed Lending Club dataset, including Logistic Regression and Balanced Random Forest Classifier models. We focus on these types of Supervised Machine Learning models because they are suited to make classification predictions, as well as their robustness and ability to handle large amounts of data. While Logistic Regression models tend to be easy to interpret, they tend to produce lower accuracy scores than other ML model types. Random Forest models tend to have higher accuracy and are also generally easier to interpret.
 
-![BRFCModel_Accuracy_ClassifReport](https://github.com/JRHattan/Dummy_Hub/blob/main/Resources/BRFCModel_Accuracy_ClassifReport.PNG)
+![BRFCModel_Accuracy_ClassifReport](https://github.com/JRHattan/ML_Models_For_Credit_Decisions/blob/main/Resources/BRFCModel_Accuracy_ClassifReport.png)
 
 
 ## Database
