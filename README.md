@@ -52,12 +52,12 @@ We performed extensive preliminary data preprocessing to prepare our dataset to 
 Since our raw dataset contained a very large amount of variables (151 columns), we performed feature engineering to reduce the quantity of features to include in our ML models. We had already eliminated features with large amounts of missing data as well as eliminating redundant or duplicate data features, and further refined our dataset by removing features that do not provide data relevant to making predictions about credit risk. We then used Principal Component Analysis (PCA), a statistical technique to optimize ML models by reducing the input features by transforming a large set of variables into a smaller one that contains most of the information in the original large set.
 The features determined by our feature reduction process represent information about a borrower’s Credit score, Annual Income, Debt-to-Income Ratio, Loan Amount, Total Credit Revolving Balance, Revolving line utilization rate (the proportion of credit the borrower is using relative to all available revolving credit)
 
-![Selected_features_LCDataDictionary](./Resources/Selected_features _LCDataDictionary.png) 
+![Selected_features_LCDataDictionary](./Resources/Selected_features_LCDataDictionary.png) 
 
 ### Determining training and testing datasets
 We split our data into training and testing sets, using scikit-learn’s “train_test_split” method, and used the default split of 75% of data for model training and 25% of data for model testing. Additionally, we use the 'stratify=y' argument which locks the distribution of classes (good loans vs. bad loans) in our 'train' and 'test' sets in order to get a similar distributions between classes.
 
-![Test_train_split-stratify].(./Resources/Test_train_split-stratify)
+![Test_train_split-stratify](./Resources/Test_train_split-stratify)
 
 ### Model choice, limitations and benefits
 We ran several types of Machine Learning models on our preprocessed Lending Club dataset, including Logistic Regression, Decision Trees, Easy Ensemble Classifiers and Balanced Random Forest Classifier models. We focus BRFC Supervised Machine Learning models because they are suited to make classification predictions, as well as their robustness and ability to handle large amounts of data- and especially because these types of models are meant to work on imbalanced data, (as our dataset has a slight to moderate imbalance- we have about 4 times as many 'good' loans as 'bad' loans). We utilize the 'StandardScaler' since our data contains features that vary widely in magnitudes, units and range. Applying scaling to our features reduces the machine learning algorithms' tendency to weigh greater values, higher and consider smaller values as the lower values, regardless of the unit of the values or the range they cover.
