@@ -3,7 +3,7 @@
 ## Presentation
 We created a presentation that outlines our project, the link to access the presentation in Google Slides is: https://docs.google.com/presentation/d/1xAZIr0kus0yixVJiz_9jeEPA4E2kzObzerQlwGsgzE4/edit#slide=id.gb8880ec250_1_23
 
-Our presentation’s first slide, first_slide.png, describes our topic, predicting loan status, and the justification for choosing it, as well as questions we wanted answered. It contains a flow chart, Flow_chart.png, demonstrating the data’s journey and the programs used to change it, beginning as a Kaggle CSV from lending club, and ending in either python for machine learning or Tableau for visualization. The analysis uses the same model but varies how many columns are included. It shows inconclusive variation between precision, recall, and f1-score, but a general accuracy score increase with fewer columns. Finally, the presentation includes several visualizations taken from our dashboard.
+Our presentation’s first slide describes our topic, predicting loan status, and the justification for choosing it, as well as questions we wanted answered. a Flow chart later demonstrates the data’s journey and the programs used to change it, beginning as a Kaggle CSV from lending club, and ending in either python for machine learning or Tableau for visualization. The analysis uses the same model but varies how many columns are included. It shows inconclusive variation between precision, recall, and f1-score, but a general accuracy score increase with fewer columns. Finally, the presentation includes several visualizations taken from our dashboard.
 
 
 ## Github
