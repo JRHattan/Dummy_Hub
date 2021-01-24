@@ -1,42 +1,81 @@
-# Classification Machine Learning Models for credit decisions
+## Presentation
+Content
+The presentation tells a story about their
+project, including the following:
+✓ Selected topic 
+✓ Reason why they selected their topic 
+✓ Description of their source of data 
+✓ Questions they hope to answer with the
+data 
+✓ Description of the data exploration phase
+of the project 
+✓ Description of the analysis phase of the
+project 
+✓ Technologies, languages, tools, and
+algorithms used throughout the project
+Slides Presentations are drafted in Google Slides
 
 
-
-## Analysis Project
-We decided to analyze loan data to build classification supervised machine learning models that predict good and bad loans with high accuracy.
-
-We felt that working with loan data and credit decision predictions would not only be very interesting, as it is widely used across lending institutions, but also a very useful exercise. 
-
-We use a dataset of Lending Club loan data spanning over 10 years.  The dataset was downloaded from Kaggle, as Lending Club no longer makes its loan data available to the general public as they did until recently.  Our dataset contains over 2.2 million rows of data, representing loan recipients and 151 columns of data pertaining to the loans. 
-
-### Questions we hope to answer through this project
-
-* Can we build machine learning models that predict good and bad loans with high accuracy?
-* Which factors (variables) contribute the most helpful information to the machine learning model?
-* Which type of machine learning model is best suited for this task?
-* Which optimization or boosting methods best help optimize the accuracy of machine learning models for this type of dataset?
-
-
-
-## GitHub
-Our communication protocols include:
-* Schedule group online meetings (Google Hangouts/Zoom)
-* Slack to notify team members of GitHub commits
-* Email & Slack to coordinate collaboration and schedule changes
-* Coordinating to attend TA office hours as a team 
-* Each team member has created a GitHub branch and we have a protocol to upload changes to our individual branches, notify team-members, and then commit or merge changes to our 'main' GitHub branch
+## Github
+Github:
+	We have used GitHub to as a way to store and share our work for this project. Currently on GitHub we have 5 branches. We have a branch for each member of the project as well as a Master Branch. The Master Branch contains all of the work that goes into the final project along with a README.md file that contains descriptions required in all other project deliverables and each task preformed to come to a final project. Also found in the README.md file is a link to a Google Slide presentation of the project.
 
 ## Machine Learning Model
-We built a first iteration machine learning model that connects to the sample data from the provisional database we built. This model is a Logistic Regression ML model that takes whether a loan is "Good" or "Bad" as the variable we are looking to predict (dependent or "y" value) and takes "FICO credit score" and "Debt-to-Income Ratio" as independent variables ("X" variable for the ML model).
 
 
-![ML model code](https://github.com/JRHattan/Dummy_Hub/blob/main/Resources/ML%20model%20code.PNG) 
+### Preliminary data preprocessing
+We performed extensive preliminary data preprocessing to prepare our dataset to function properly in Machine Learning models, including:
 
-Our initial mockup Machine Learning model produces an accuracy score of 0.81
-![accuracy score](https://github.com/JRHattan/Dummy_Hub/blob/main/Resources/accuracy%20score.PNG)
+* We filtered our dataset on “loan_status” column, dropping all categories except “Fully Paid” & “Charged Off” to create a “good loan vs. bad loan” column ( we exclude data pertaining to loans that are in repayment to focus only on the loans where the outcome is known, either “Fully Paid” (good loans) or “Charged Off” (bad loans))
 
-## Database
-We built a provisional SQLite database that takes sample loan data from our Lending Club loan dataset and creates a dataframe that can be read into our Machine Learning model. We filtered the dataset down from 2.2million rows of loan data to about 40,000 rows (sorting by date to capture only 2 months worth of data) and selecting 10 columns of loan data to build our initial sample dataset to feed into the machine learning model. 
+* We learned from our data exploration that the loan dataset contained a large amount of missing values, so we dropped all columns that were missing over 100,000 values
 
-![Database connection](https://github.com/JRHattan/Dummy_Hub/blob/main/Resources/Database%20connection.PNG) 
+* We used the “data dictionary” from Lending Club to learn about each column of data and used this resource and subject matter expertise to drop duplicate data columns, text and date data columns that are not usable in ML models, as well as data columns that would not be known before a loan is approved and being serviced
+* We dropped missing values or “na”s from dataset using Panda’s “dropna” method
+* We transformed non-numeric categorical data to dummy variables with Panda’s “get_dummies” method
+
+### Preliminary feature engineering and preliminary feature selection
+Since our raw dataset contained a very large amount of variables (151 columns), we performed feature engineering to reduce the quantity of features to include in our ML models. We had already eliminated features with large amounts of missing data as well as eliminating redundant or duplicate data features, and further refined our dataset by removing features that do not provide data relevant to making predictions about credit risk. We then used Principal Component Analysis (PCA), a statistical technique to optimize ML models by reducing the input features by transforming a large set of variables into a smaller one that contains most of the information in the original large set.
+The features determined by our feature reduction process represent information about a borrower’s Credit score, Annual Income, Debt-to-Income Ratio, Loan Amount, Total Credit Revolving Balance, Revolving line utilization rate (the proportion of credit the borrower is using relative to all available revolving credit)
+
+![Selected_features_LCDataDictionary](./Resources/Selected_features_LCDataDictionary.png) 
+
+### Determining training and testing datasets
+We split our data into training and testing sets, using scikit-learn’s “train_test_split” method, and used the default split of 75% of data for model training and 25% of data for model testing. Additionally, we use the 'stratify=y' argument which locks the distribution of classes (good loans vs. bad loans) in our 'train' and 'test' sets in order to get a similar distributions between classes.
+
+
+![Test_train_split-stratify](./Resources/Test_train_split-stratify.png)
+
+### Model choice, limitations and benefits
+We ran several types of Machine Learning models on our preprocessed Lending Club dataset, including Logistic Regression, Decision Trees, Easy Ensemble Classifiers and Balanced Random Forest Classifier models. We focus BRFC Supervised Machine Learning models because they are suited to make classification predictions, as well as their robustness and ability to handle large amounts of data- and especially because these types of models are meant to work on imbalanced data, (as our dataset has a slight to moderate imbalance- we have about 4 times as many 'good' loans as 'bad' loans). We utilize the 'StandardScaler' since our data contains features that vary widely in magnitudes, units and range. Applying scaling to our features reduces the machine learning algorithms' tendency to weigh greater values, higher and consider smaller values as the lower values, regardless of the unit of the values or the range they cover.
+![BRFC_model_scaled](./Resources/BRFC_model_scaled.png)
+
+* We added PCA to our BRFC model (between Segment 2 and Segment 3 deliverables) to reduce the dimensions (columns) we feed into the model and increase the model accuracy and reduce the differences in Precision and Recall between 'good' and 'bad' loan classes. 
+![PCA_15variables-7Components](./Resources/PCA_15variables-7Components.png)
+We iterated over different combinations of features and Principal Components, using the 'Feature Importance' ranking to select the features with the highest importance ratings. Our final BRFC model uses PCA on 15 features to transform down to 7 Principal Components.
+
+#### Training & Testing model
+* We trained our model on 75% of the cleaned and preprocessed loan data (946,875 rows ) and tested the model on 25% of loan data (315,625 rows of data). 
+    
+#### Accuracy Scores
+The successive models we built, trained and tested produced accuracy scores that increased from 0.49 (when we used 46 vaiables reduced to 10 Principal Components) 
+![BRFC_PCA10_46Vars_AccuracyClassification](./BRFC_PCA10_46Vars_AccuracyClassification.png)
+to 0.549 Accuracy when using 15 variables to reduce down to 7 Principal Components.
+
+![BRFC_PCA7_15Vars_AccuracyClassification](./BRFC_PCA7_15Vars_AccuracyClassification.png)
+
+The Precision and Recall and F1 Scores for minority and majority classes does not vary very much between model iterations, typically showing better scores for the majority class '1' which represent 'good loans' or those 'Fully Repaid'.
+
+While our model does not produce as high an accuracy score as we would have liked, we were able to improve the accuracy score by iterating through feature engineering, and modifying the amount of variables and Principal Components we feed into the model. This model predicts whether a loan is likely to be Fully Repaid or Charged Off with slightly better than half the time (0.549) and should have some utility in predicting good vs. bad loans at lending institutions. 
+
+
+## Dashboard
+The dashboard presents a data story that is
+logical and easy to follow for someone
+unfamiliar with the topic. It includes all of the
+following:
+
+✓ Images from the initial analysis 
+✓ Data (images or report) from the machine
+learning task 
 
