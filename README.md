@@ -31,14 +31,17 @@ The features determined by our feature reduction process represent information a
 ### Determining training and testing datasets
 We split our data into training and testing sets, using scikit-learn’s “train_test_split” method, and used the default split of 75% of data for model training and 25% of data for model testing. Additionally, we use the 'stratify=y' argument which locks the distribution of classes (good loans vs. bad loans) in our 'train' and 'test' sets in order to get a similar distributions between classes.
 
-![Test_train_split-stratify](./Resources/Test_train_split-stratify.png)
+![Test_train_split-stratify](https://github.com/JRHattan/ML_Models_For_Credit_Decisions/blob/main/Resources/Test_train_split-stratify.png)
 
 ### Model choice, limitations and benefits
 We ran several types of Machine Learning models on our preprocessed Lending Club dataset, including Logistic Regression, Decision Trees, Easy Ensemble Classifiers and Balanced Random Forest Classifier models. We focus BRFC Supervised Machine Learning models because they are suited to make classification predictions, as well as their robustness and ability to handle large amounts of data- and especially because these types of models are meant to work on imbalanced data, (as our dataset has a slight to moderate imbalance- we have about 4 times as many 'good' loans as 'bad' loans). We utilize the 'StandardScaler' since our data contains features that vary widely in magnitudes, units and range. Applying scaling to our features reduces the machine learning algorithms' tendency to weigh greater values, higher and consider smaller values as the lower values, regardless of the unit of the values or the range they cover.
-![BRFC_model_scaled](./Resources/BRFC_model_scaled.png)
+
+![BRFC_model_scaled](https://github.com/JRHattan/ML_Models_For_Credit_Decisions/blob/main/Resources/BRFC_model_scaled.png)
 
 * We added PCA to our BRFC model (between Segment 2 and Segment 3 deliverables) to reduce the dimensions (columns) we feed into the model and increase the model accuracy and reduce the differences in Precision and Recall between 'good' and 'bad' loan classes. 
-![PCA_15variables-7Components](./Resources/PCA_15variables-7Components.png)
+
+![PCA_15variables-7Components](https://github.com/JRHattan/ML_Models_For_Credit_Decisions/blob/main/Resources/PCA_15variables-7Components.png)
+
 We iterated over different combinations of features and Principal Components, using the 'Feature Importance' ranking to select the features with the highest importance ratings. Our final BRFC model uses PCA on 15 features to transform down to 7 Principal Components.
 
 #### Training & Testing model
@@ -46,10 +49,12 @@ We iterated over different combinations of features and Principal Components, us
     
 #### Accuracy Scores
 The successive models we built, trained and tested produced accuracy scores that increased from 0.49 (when we used 46 vaiables reduced to 10 Principal Components) 
-![BRFC_PCA10_46Vars_AccuracyClassification](./BRFC_PCA10_46Vars_AccuracyClassification.png)
+
+![BRFC_PCA10_46Vars_AccuracyClassification](https://github.com/JRHattan/ML_Models_For_Credit_Decisions/blob/main/Resources/BRFC_PCA10_46Vars_AccuracyClassification.png)
+
 to 0.549 Accuracy when using 15 variables to reduce down to 7 Principal Components.
 
-![BRFC_PCA7_15Vars_AccuracyClassification](./BRFC_PCA7_15Vars_AccuracyClassification.png)
+![BRFC_PCA7_15Vars_AccuracyClassification](https://github.com/JRHattan/ML_Models_For_Credit_Decisions/blob/main/Resources/BRFC_PCA7_15Vars_AccuracyClassification.png)
 
 The Precision and Recall and F1 Scores for minority and majority classes does not vary very much between model iterations, typically showing better scores for the majority class '1' which represent 'good loans' or those 'Fully Repaid'.
 
