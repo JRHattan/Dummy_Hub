@@ -17,22 +17,8 @@ Slides Presentations are drafted in Google Slides
 
 
 ## Github
-Master Branch All code in the master branch is productionready.
-Master branch should include: 
-✓ All code necessary to perform exploratory analysis 
-✓ Most code necessary to complete the machine learning portion of the project
-
-README.md 
-README.md must include: 
-✓ Description of the communication
-protocols has been removed 
-✓ Cohesive, structured outline of the project (this may include images, but should be easy to follow and digest) 
-✓ Link to Google Slides draft presentation
-Note: The descriptions and explanations required in all other project deliverables should also be in your README.md as partof your outline, unless otherwise noted.
-Individual Branches 
-✓ At least one branch  for each team member ✓ Each team member has at least four
-commits for the duration of the third segment
-(12 total commits per person)
+Github:
+	We have used GitHub to as a way to store and share our work for this project. Currently on GitHub we have 5 branches. We have a branch for each member of the project as well as a Master Branch. The Master Branch contains all of the work that goes into the final project along with a README.md file that contains descriptions required in all other project deliverables and each task preformed to come to a final project. Also found in the README.md file is a link to a Google Slide presentation of the project.
 
 ## Machine Learning Model
 
