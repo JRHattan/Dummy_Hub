@@ -1,41 +1,13 @@
 ## Presentation
-Content
-The presentation tells a story about their
-project, including the following:
-✓ Selected topic 
-✓ Reason why they selected their topic 
-✓ Description of their source of data 
-✓ Questions they hope to answer with the
-data 
-✓ Description of the data exploration phase
-of the project 
-✓ Description of the analysis phase of the
-project 
-✓ Technologies, languages, tools, and
-algorithms used throughout the project
-Slides Presentations are drafted in Google Slides
+We created a presentation that outlines our project, the link to access the presentation in Google Slides is: https://docs.google.com/presentation/d/1wl5fh1hy7INwmN3SFGhOb3SmR-6gdZKuIa7i79OaafM/edit?ts=5fe9341f#slide=id.gb622606d37_0_5
+
+Our presentation’s first slide, first_slide.png, describes our topic, predicting loan status, and the justification for choosing it, as well as questions we wanted answered. It contains a flow chart, Flow_chart.png, demonstrating the data’s journey and the programs used to change it, beginning as a Kaggle CSV from lending club, and ending in either python for machine learning or Tableau for visualization. The analysis uses the same model but varies how many columns are included. It shows inconclusive variation between precision, recall, and f1-score, but a general accuracy score increase with fewer columns. Finally, the presentation includes several visualizations taken from our dashboard.
 
 
 ## Github
-Master Branch All code in the master branch is productionready.
-Master branch should include: 
-✓ All code necessary to perform exploratory analysis 
-✓ Most code necessary to complete the machine learning portion of the project
-
-README.md 
-README.md must include: 
-✓ Description of the communication
-protocols has been removed 
-✓ Cohesive, structured outline of the project (this may include images, but should be easy to follow and digest) 
-✓ Link to Google Slides draft presentation
-Note: The descriptions and explanations required in all other project deliverables should also be in your README.md as partof your outline, unless otherwise noted.
-Individual Branches 
-✓ At least one branch  for each team member ✓ Each team member has at least four
-commits for the duration of the third segment
-(12 total commits per person)
+We have used GitHub to as a way to store and share our work for this project. Currently on GitHub we have 5 branches. We have a branch for each member of the project as well as a Master Branch. The Master Branch contains all of the work that goes into the final project along with a README.md file that contains descriptions required in all other project deliverables and each task preformed to come to a final project. 
 
 ## Machine Learning Model
-
 
 ### Preliminary data preprocessing
 We performed extensive preliminary data preprocessing to prepare our dataset to function properly in Machine Learning models, including:
@@ -56,7 +28,6 @@ The features determined by our feature reduction process represent information a
 
 ### Determining training and testing datasets
 We split our data into training and testing sets, using scikit-learn’s “train_test_split” method, and used the default split of 75% of data for model training and 25% of data for model testing. Additionally, we use the 'stratify=y' argument which locks the distribution of classes (good loans vs. bad loans) in our 'train' and 'test' sets in order to get a similar distributions between classes.
-
 
 ![Test_train_split-stratify](./Resources/Test_train_split-stratify.png)
 
@@ -84,12 +55,4 @@ While our model does not produce as high an accuracy score as we would have like
 
 
 ## Dashboard
-The dashboard presents a data story that is
-logical and easy to follow for someone
-unfamiliar with the topic. It includes all of the
-following:
-
-✓ Images from the initial analysis 
-✓ Data (images or report) from the machine
-learning task 
-
+The dashboard built in tableau shows the relationships of a combination of variables through various charts and graphs. The dashboard shows the difference between charged off and paid for loans compared to several other variables so we can dive a little deeper on what the difference between these two types of loans. We used StandardScaler since our data has wide ranges for multiple variables. This reduces the machine learning’s inclination to put more emphasis on the greater values and less emphasis on the lesser values regardless of the values and the range they cover. You can see how variables change over time and how two variables are directly correlated to each other.
