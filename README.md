@@ -7,7 +7,7 @@ Our presentation’s first slide describes our topic, predicting loan status, an
 
 
 ## Github
-We have used GitHub to as a way to store and share our work for this project. Currently on GitHub we have 5 branches. We have a branch for each member of the project as well as a Master Branch. The Master Branch contains all of the work that goes into the final project along with a README.md file that contains descriptions required in all other project deliverables and each task preformed to come to a final project. 
+We have used GitHub as a way to store and share our work for this project. Currently on GitHub we have 5 branches. We have a branch for each member of the project as well as a Master Branch. The Master Branch contains all of the work that goes into the final project, a master code; along with a README.md file that contains descriptions of the final project. Also found in the README.md file is a link to a Google Slide presentation of the project.
 
 ## Machine Learning Model
 
