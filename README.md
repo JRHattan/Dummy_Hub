@@ -57,6 +57,7 @@ The features determined by our feature reduction process represent information a
 ### Determining training and testing datasets
 We split our data into training and testing sets, using scikit-learn’s “train_test_split” method, and used the default split of 75% of data for model training and 25% of data for model testing. Additionally, we use the 'stratify=y' argument which locks the distribution of classes (good loans vs. bad loans) in our 'train' and 'test' sets in order to get a similar distributions between classes.
 
+
 ![Test_train_split-stratify](./Resources/Test_train_split-stratify.png)
 
 ### Model choice, limitations and benefits
@@ -91,4 +92,4 @@ following:
 ✓ Images from the initial analysis 
 ✓ Data (images or report) from the machine
 learning task 
-✓ At least one interactive element
+
