@@ -1,3 +1,5 @@
+# Classification Machine Learning Models for credit decisions
+
 ## Presentation
 We created a presentation that outlines our project, the link to access the presentation in Google Slides is: https://docs.google.com/presentation/d/1wl5fh1hy7INwmN3SFGhOb3SmR-6gdZKuIa7i79OaafM/edit?ts=5fe9341f#slide=id.gb622606d37_0_5
 
