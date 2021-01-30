@@ -20,6 +20,7 @@ The Tableau dashboard visualizes variable relationships, letting us see changes 
 ![dashboard%20pic](https://github.com/JRHattan/ML_Models_For_Credit_Decisions/blob/main/Resources/dashboard%20pic.PNG)
 Many visualizations highlighted dataset class imbalances our project needed to adjust for. In particular, we noticed several variables, such as a borrower's annual income, had wide ranges- going from $1,000 USD to $11,000,000 USD.To protect the model from interference, we realized the dataset needed scaling, which we implemented using StandardScaler.
 ![scaled_unscaled](https://github.com/JRHattan/ML_Models_For_Credit_Decisions/blob/main/Resources/scaled_unscaled.PNG)
+
 Our Dashboard's link allows access to interactive elements, including Average loan amount by state, Loan Purpose, Loan Amounts and Interest Rates Charged, and both the scaled and unscaled versions of annual income vs FICO. The link is: https://public.tableau.com/profile/joel8111#!/vizhome/Deliv4Dashboard/Dashboard1
 
 ## Machine Learning Model
